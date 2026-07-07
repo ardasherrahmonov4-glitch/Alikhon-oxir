@@ -1,11 +1,303 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World of Programming</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-950 text-white">
+    <div
+      class="fixed flex z-10 items-center gap-60 justify-center w-full p-4 backdrop-blur-xl border-b border-white/15 duration-300 shadow-[0_8px_32px_0_rgba(0,200,255,0.1)]"
+    >
+      <div class="flex justify-between items-center lg:gap-70 gap-0 px-6 h-24">
+        <h1 class="text-2xl lg:text-4xl font-black">World of Programming</h1>
+        <ul class="lg:flex gap-10 items-center max-sm:hidden">
+          <li class="hover:underline hover:text-2xl">
+            <a href="./index.html">Home</a>
+          </li>
+          <li class="hover:underline hover:text-2xl">
+            <a href="./index1.html">Languages</a>
+          </li>
+          <li class="underline text-2xl">
+            <a href="./index2.html">Web Dev</a>
+          </li>
+          <li class="hover:underline hover:text-2xl">
+            <a href="./index3.html">Mobile Apps</a>
+          </li>
+          <li class="hover:underline hover:text-2xl">
+            <a href="./index4.html">Game Dev</a>
+          </li>
+          <li class="hover:underline hover:text-2xl">
+            <a href="./index5.html">Future</a>
+          </li>
+        </ul>
+        <button class="hidden lg:block bg-blue-700 px-6 py-2 rounded-xl">
+          Sign In
+        </button>
+        <button id="menuBtn" class="lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="34"
+            height="34"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="white"
+            stroke-width="2"
+          >
+            <path d="M3 6h18" />
+            <path d="M3 12h18" />
+            <path d="M3 18h18" />
+          </svg>
+        </button>
+      </div>
+      <div
+        id="overlay"
+        class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+      ></div>
+      <div
+        id="menu"
+        class="fixed top-0 right-[-100%] w-72 h-screen bg-gray-900 z-50 transition-all duration-300 shadow-2xl rounded-l-3xl"
+      >
+        <div
+          class="flex justify-between items-center p-6 border-b border-gray-700"
+        >
+          <h2 class="text-2xl font-bold">Menu</h2>
+
+          <button id="closeBtn" class="text-3xl">✕</button>
+        </div>
+
+        <nav class="flex flex-col mt-5">
+          <a
+            href="./index.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+            🏠 Home
+          </a>
+
+          <a
+            href="./index1.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+            💻 Languages
+          </a>
+
+          <a
+            href="./index2.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+            🌐 Web Dev
+          </a>
+
+          <a
+            href="./index3.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+            📱 Mobile Apps
+          </a>
+
+          <a
+            href="./index4.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+            🎮 Game Dev
+          </a>
+
+          <a
+            href="./index5.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+            🚀 Future
+          </a>
+
+          <button
+            class="mx-6 mt-8 bg-blue-700 py-3 rounded-xl hover:bg-blue-800"
+          >
+            Sign In
+          </button>
+        </nav>
+        <script>
+          const menu = document.getElementById("menu");
+          const overlay = document.getElementById("overlay");
+
+          document.getElementById("menuBtn").onclick = () => {
+            menu.style.right = "0";
+            overlay.classList.remove("hidden");
+          };
+
+          document.getElementById("closeBtn").onclick = closeMenu;
+          overlay.onclick = closeMenu;
+
+          function closeMenu() {
+            menu.style.right = "-100%";
+            overlay.classList.add("hidden");
+          }
+        </script>
+      </div>
+    </div>
+    <div
+      class="pt-40 flex gap-50 max-sm:gap-20 justify-center items-center max-sm:flex-wrap"
+    >
+      <div>
+        <h1 class="text-blue-400">Fundamental Concept</h1>
+        <h1 class="font-black text-5xl pt-8">
+          Архитектор <br />
+          цифровых миров
+        </h1>
+        <h1 class="pt-8">
+          Программист — это не просто человек, пишущий код. Это инженер, который
+          <br />
+          проектирует логику современных систем, создавая инструменты,
+          которыми<br />
+          пользуются миллионы людей каждый день.
+        </h1>
+        <div class="pt-10 flex lg:gap-10 gap-5">
+          <button
+            class="text-black w-45 h-15 rounded-2xl transform hover:scale-80 bg-white"
+          >
+            Начать обучение
+          </button>
+          <button
+            class="w-45 h-15 rounded-2xl border-2 border-white transform hover:bg-gray-900"
+          >
+            Обзор курсов
+          </button>
+        </div>
+      </div>
+      <img class="w-80 h-90" src="./images2/image.png" alt="foto" />
+    </div>
+    <div class="pt-50">
+      <h1 class="text-5xl font-black text-center">Направления специализации</h1>
+      <h1 class="text-center pt-5">
+        От мобильных приложений до сложных систем управления
+      </h1>
+      <div
+        class="pt-10 flex justify-center items-center gap-40 max-sm:flex-wrap max-sm:gap-20"
+      >
+        <div
+          class="w-60 h-70 bg-gray-900 flex justify-center items-center transform hover:scale-110"
+        >
+          <div>
+            <div class="w-10 flex justify-center items-center bg-gray-800 h-10">
+              🌐
+            </div>
+            <h1 class="pt-5 text-2xl">Web</h1>
+            <h1 class="pt-5">
+              Создание <br />
+              интерактивных <br />
+              интерфейсов и <br />
+              масштабируемых <br />
+              серверов.
+            </h1>
+          </div>
+        </div>
+        <div
+          class="w-60 h-70 bg-gray-900 flex justify-center items-center transform hover:scale-110"
+        >
+          <div>
+            <div class="w-10 flex justify-center items-center bg-gray-800 h-10">
+              📱
+            </div>
+            <h1 class="pt-5 text-2xl">Mobile</h1>
+            <h1 class="pt-5">
+              Разработка приложений <br />
+              для iOS и Android, <br />
+              которые всегда под <br />
+              рукой.
+            </h1>
+          </div>
+        </div>
+        <div
+          class="w-60 h-70 bg-gray-900 flex justify-center items-center transform hover:scale-110"
+        >
+          <div>
+            <div class="w-10 flex justify-center items-center bg-gray-800 h-10">
+              🕹️
+            </div>
+            <h1 class="pt-5 text-2xl">Games</h1>
+            <h1 class="pt-5">
+              Проектирование <br />
+              игровых механик и <br />
+              виртуальных миров.
+            </h1>
+          </div>
+        </div>
+        <div
+          class="w-60 h-70 bg-gray-900 flex justify-center items-center transform hover:scale-110"
+        >
+          <div>
+            <div class="w-10 flex justify-center items-center bg-gray-800 h-10">
+              📐
+            </div>
+            <h1 class="pt-5 text-2xl">Systems</h1>
+            <h1 class="pt-5">
+              Работа с<br />
+              низкоуровневым кодом,<br />
+              драйверами и ядром ОС.
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex justify-center items-center pt-50 gap-40 max-sm:gap-20 max-sm:flex-wrap"
+    >
+      <img
+        class="max-sm:w-100% rounded-2xl"
+        src="./images2/image copy.png"
+        alt="foto"
+      />
+      <div>
+        <h1 class="text-3xl font-black">Магия в действии</h1>
+        <h1 class="pt-10">
+          Этот интерактивный блок кода<br />
+          демонстрирует, как абстрактные идеи <br />
+          превращаются в структурированную<br />
+          логику. Программист переводит желания<br />
+          бизнеса на язык машин.
+        </h1>
+        <div class="pt-15">
+          <div
+            class="w-85 h-20 flex justify-center rounded-2xl items-center gap-10 hover:bg-gray-900"
+          >
+            <h1 class="text-4xl">bolt</h1>
+            <div>
+              <h1 class="text-2xl">Оптимизация</h1>
+              <h1>Снижение задержек на 40%</h1>
+            </div>
+          </div>
+        </div>
+        <div class="pt-15">
+          <div
+            class="w-90 h-25 flex justify-center rounded-2xl items-center gap-10 hover:bg-gray-900"
+          >
+            <h1 class="text-4xl">security</h1>
+            <div>
+              <h1 class="text-2xl">Безопасность</h1>
+              <h1>
+                Шифрование военного <br />
+                уровня
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pt-50 max-sm:pt-30">
+      <div
+        class="h-40 flex gap-200 justify-center border-2 border-white bg-black items-center max-sm:gap-10 max-sm:flex-wrap max-sm:h-50"
+      >
+        <div>
+          <h1 class="text-2xl font-black">World of Programming</h1>
+          <p>© 2024 World of Programming. All rights reserved.</p>
+        </div>
+        <ul class="flex gap-5">
+          <li>Privacy Policy</li>
+          <li>Terms of Service</li>
+          <li>Contact</li>
+          <li>Sitemap</li>
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>

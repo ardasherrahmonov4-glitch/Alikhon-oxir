@@ -1,11 +1,390 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World of Programming</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="text-white bg-gray-950 w-100%">
+    <div
+      class="fixed flex z-10 items-center gap-60 justify-center w-full p-4 backdrop-blur-xl border-b border-white/15 duration-300 shadow-[0_8px_32px_0_rgba(0,200,255,0.1)]"
+    >
+      <div
+        class="flex justify-between items-center lg:gap-70 max-sm:gap-20 px-6 h-24"
+      >
+        <h1 class="text-2xl lg:text-4xl font-black">World of Programming</h1>
+        <ul class="hidden lg:flex gap-10 items-center">
+          <li class="hover:underline hover:text-2xl">
+            <a href="./index.html">Home</a>
+          </li>
+          <li class="hover:underline hover:text-2xl">
+            <a href="./index1.html">Languages</a>
+          </li>
+          <li class="hover:underline hover:text-2xl">
+            <a href="./index2.html">Web Dev</a>
+          </li>
+          <li class="hover:underline hover:text-2xl">
+            <a href="./index3.html">Mobile Apps</a>
+          </li>
+          <li class="underline text-2xl">
+            <a href="./index4.html">Game Dev</a>
+          </li>
+          <li class="hover:underline hover:text-2xl">
+            <a href="./index5.html">Future</a>
+          </li>
+        </ul>
+        <button class="hidden lg:block bg-blue-700 px-6 py-2 rounded-xl">
+          Sign In
+        </button>
+        <button id="menuBtn" class="lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="34"
+            height="34"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="white"
+            stroke-width="2"
+          >
+            <path d="M3 6h18" />
+            <path d="M3 12h18" />
+            <path d="M3 18h18" />
+          </svg>
+        </button>
+      </div>
+      <div
+        id="overlay"
+        class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+      ></div>
+      <div
+        id="menu"
+        class="fixed top-0 right-[-100%] w-72 h-screen bg-gray-900 z-50 transition-all duration-300 shadow-2xl rounded-l-3xl"
+      >
+        <div
+          class="flex justify-between items-center p-6 border-b border-gray-700"
+        >
+          <h2 class="text-2xl font-bold">Menu</h2>
+
+          <button id="closeBtn" class="text-3xl">✕</button>
+        </div>
+
+        <nav class="flex flex-col mt-5">
+          <a
+            href="./index.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+            🏠 Home
+          </a>
+
+          <a
+            href="./index1.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+            💻 Languages
+          </a>
+
+          <a
+            href="./index2.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+            🌐 Web Dev
+          </a>
+
+          <a
+            href="./index3.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+            📱 Mobile Apps
+          </a>
+
+          <a
+            href="./index4.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+            🎮 Game Dev
+          </a>
+
+          <a
+            href="./index5.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+            🚀 Future
+          </a>
+
+          <button
+            class="mx-6 mt-8 bg-blue-700 py-3 rounded-xl hover:bg-blue-800"
+          >
+            Sign In
+          </button>
+        </nav>
+        <script>
+          const menu = document.getElementById("menu");
+          const overlay = document.getElementById("overlay");
+
+          document.getElementById("menuBtn").onclick = () => {
+            menu.style.right = "0";
+            overlay.classList.remove("hidden");
+          };
+
+          document.getElementById("closeBtn").onclick = closeMenu;
+          overlay.onclick = closeMenu;
+
+          function closeMenu() {
+            menu.style.right = "-100%";
+            overlay.classList.add("hidden");
+          }
+        </script>
+      </div>
+    </div>
+    <div class="flex pt-40 justify-center items-center">
+      <div>
+        <div>
+          <h1 class="text-2xl font-black">Сайты</h1>
+          <h1 class="pt-5 max-sm:flex-wrap">
+            HTML, CSS и JavaScript используются для веб-разработки. Это три
+            кита, на которых держитсяv<br />
+            современный интернет, превращая код в интерактивный пользовательский
+            опыт.
+          </h1>
+        </div>
+        <div class="max-sm:flex justify-center">
+          <div class="pt-10">
+            <h1 class="text-blue-400">The Core Trinity</h1>
+            <div class="pt-5">
+              <div
+                class="w-280 h-70 bg-gray-900 gap-30 lg:flex justify-center items-center hover:bg-gray-800 max-sm:w-95 max-sm:h-123 flex-wrap"
+              >
+                <div>
+                  <h1 class="text-2xl">Structure (HTML)</h1>
+                  <h1 class="pt-3">
+                    Гипертекстовая разметка определяет скелет страницы. Она
+                    организует <br />
+                    заголовки, параграфы и изображения в логическую иерархию,
+                    <br />
+                    понятную браузерам и поисковым системам.
+                  </h1>
+                  <div class="pt-5 flex gap-5">
+                    <h1
+                      class="w-26 bg-gray-700 bg h-6 flex rounded-2xl justify-center items-center"
+                    >
+                      Semantic
+                    </h1>
+                    <h1
+                      class="w-30 bg-gray-700 bg h-6 flex rounded-2xl justify-center items-center"
+                    >
+                      Accessibility
+                    </h1>
+                    <h1
+                      class="w-16 bg-gray-700 bg h-6 flex rounded-2xl justify-center items-center"
+                    >
+                      SEO
+                    </h1>
+                  </div>
+                </div>
+                <br />
+                <img
+                  class="w-80 h-60"
+                  src="./images4/image copy.png"
+                  alt="foto"
+                />
+              </div>
+            </div>
+            <div class="pt-10">
+              <div
+                class="w-280 h-70 bg-gray-900 gap-30 lg:flex justify-center items-center hover:bg-gray-800 max-sm:w-95 max-sm:h-123 flex-wrap"
+              >
+                <div>
+                  <h1 class="text-2xl">Styling (CSS)</h1>
+                  <h1 class="pt-3">
+                    Каскадные таблицы стилей отвечают за визуальный облик. Цвет,
+                    <br />
+                    отступы, шрифты и адаптивные макеты превращают скучную
+                    <br />
+                    разметку в эстетичный цифровой продукт.
+                  </h1>
+                  <div class="pt-5 flex gap-5">
+                    <h1
+                      class="w-20 bg-gray-700 bg h-6 flex rounded-2xl justify-center items-center"
+                    >
+                      Flexbox
+                    </h1>
+                    <h1
+                      class="w-16 bg-gray-700 bg h-6 flex rounded-2xl justify-center items-center"
+                    >
+                      Grid
+                    </h1>
+                    <h1
+                      class="w-30 bg-gray-700 bg h-6 flex rounded-2xl justify-center items-center"
+                    >
+                      Animations
+                    </h1>
+                  </div>
+                </div>
+                <br />
+                <img
+                  class="w-80 h-60"
+                  src="./images4/image copy 2.png"
+                  alt="foto"
+                />
+              </div>
+            </div>
+            <div class="pt-10">
+              <div
+                class="w-280 h-70 bg-gray-900 gap-30 lg:flex justify-center items-center hover:bg-gray-800 max-sm:w-95 max-sm:h-123 flex-wrap"
+              >
+                <div>
+                  <h1 class="text-2xl">Logic (JavaScript)</h1>
+                  <h1 class="pt-3">
+                    Язык программирования, который оживляет страницы. От <br />
+                    обработки кликов до сложных вычислений и запросов к серверу
+                    <br />
+                    — JavaScript делает веб динамичным.
+                  </h1>
+                  <div class="pt-5 flex gap-5">
+                    <h1
+                      class="w-43 bg-gray-700 bg h-6 flex rounded-2xl justify-center items-center"
+                    >
+                      DOM Manipulation
+                    </h1>
+                    <h1
+                      class="w-30 bg-gray-700 bg h-6 flex rounded-2xl justify-center items-center"
+                    >
+                      Async/Await
+                    </h1>
+                    <h1
+                      class="w-30 bg-gray-700 bg h-6 flex rounded-2xl justify-center items-center"
+                    >
+                      Interactivity
+                    </h1>
+                  </div>
+                </div>
+                <br />
+                <img
+                  class="w-80 h-60"
+                  src="./images4/image copy 3.png"
+                  alt="foto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex pt-50 justify-center items-center">
+      <div>
+        <h1 class="text-4xl max-sm:text-center">Modern Ecosystem</h1>
+        <div
+          class="flex gap-30 pt-10 max-sm:flex-wrap max-sm:gap-20 max-sm:justify-center"
+        >
+          <div
+            class="w-80 h-70 bg-gray-900 flex justify-center items-center transform hover:scale-110"
+          >
+            <div>
+              <div
+                class="w-10 flex justify-center items-center bg-gray-800 h-10"
+              >
+                🌐
+              </div>
+              <h1 class="pt-5 text-2xl">React</h1>
+              <h1 class="pt-5">
+                Компонентный подход для создания <br />
+                сложных интерфейсов с реактивным <br />
+                состоянием.
+              </h1>
+              <div class="pt-5">
+                <button class="text-blue-400 w-50 h-10 hover:border-2">
+                  EXPLORE TOOLS →
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-80 h-70 bg-gray-900 flex justify-center items-center transform hover:scale-110"
+          >
+            <div>
+              <div
+                class="w-10 flex justify-center items-center bg-gray-800 h-10"
+              >
+                📱
+              </div>
+              <h1 class="pt-5 text-2xl">Tailwind CSS</h1>
+              <h1 class="pt-5">
+                Utility-first фреймворк, позволяющий <br />
+                верстать сайты с невероятной <br />
+                скоростью.
+              </h1>
+              <div class="pt-5">
+                <button class="text-blue-400 w-50 h-10 hover:border-2">
+                  View Tokens →
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-80 h-70 bg-gray-900 flex justify-center items-center transform hover:scale-110"
+          >
+            <div>
+              <div
+                class="w-10 flex justify-center items-center bg-gray-800 h-10"
+              >
+                🕹️
+              </div>
+              <h1 class="pt-5 text-2xl">Vite</h1>
+              <h1 class="pt-5">
+                Современный инструмент сборки, <br />
+                который делает разработку <br />
+                мгновенной.
+              </h1>
+              <div class="pt-5">
+                <button class="text-blue-400 w-50 h-10 hover:border-2">
+                  Build Faster →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex pt-50 justify-center items-center">
+      <div class="a2">
+        <div>
+          <h1 class="text-4xl font-black">Готовы создавать?</h1>
+          <h1 class="pt-5">
+            Начните свой путь в веб-разработке сегодня. Наши интерактивные
+            <br />
+            курсы помогут вам освоить все уровни стека.
+          </h1>
+          <div class="flex italic pt-10 gap-5">
+            <button class="text-black w-35 h-15 bg-white hover:scale-110">
+              Enroll Now
+            </button>
+            <button
+              class="w-35 h-15 hover:bg-gray-900 border-2 border-gray-900"
+            >
+              Curriculum
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pt-50 max-sm:pt-30">
+      <div
+        class="lg:h-30 flex lg:gap-200 justify-center bg-black items-center flex-wrap h-60"
+      >
+        <div>
+          <h1 class="text-2xl font-black">World of Programming</h1>
+          <p>© 2024 World of Programming. All rights reserved.</p>
+        </div>
+        <ul class="flex gap-5">
+          <li>Privacy Policy</li>
+          <li>Terms of Service</li>
+          <li>Contact</li>
+          <li>Sitemap</li>
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>

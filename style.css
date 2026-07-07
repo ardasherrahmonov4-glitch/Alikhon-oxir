@@ -1,10 +1,63 @@
-.a1{
+.a1 {
     background-image: url(./images1/image.png);
     width: 90%;
     height: 400px;
     display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     border-radius: 30px;
     position: absolute;
     justify-content: center;
     align-items: center;
+}
+
+.a2 {
+    background-image: url(./images4/image.png);
+    width: 90%;
+    height: 400px;
+    display: flex;
+    padding: 0 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+    align-items: center;
+}
+
+.a3 {
+    background-image: url(./images5/image.png);
+    width: 40%;
+    height: 550px;
+    display: flex;
+    padding: 10px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+    align-items: end;
+}
+
+.a4 {
+    background-image: url(./images7/image.png);
+    width: 80%;
+    height: 400px;
+    display: flex;
+    padding: 0 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+    align-items: end;
+}
+
+@media (max-width: 640px) {
+    .a3 {
+        width: 90%;
+        height: 500px;
+    }
+    .a4 {
+        width: 90%;
+        height: 500px;
+    }
 }
