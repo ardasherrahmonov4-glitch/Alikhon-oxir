@@ -51,6 +51,44 @@
     align-items: end;
 }
 
+.a5{
+    background-image: url(./images6/image.png);
+    width: 70%;
+    height: 400px;
+    display: flex;
+    padding: 0 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+    align-items: center;
+}
+.a6{
+    background-image: url(./images/image.png);
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    padding: 0 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+    align-items: center;
+}
+.a7{
+    background-image: url(./images8/image\ copy.png);
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    padding: 0 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+    align-items: end;
+}
 @media (max-width: 640px) {
     .a3 {
         width: 90%;
@@ -59,5 +97,13 @@
     .a4 {
         width: 90%;
         height: 500px;
+    }
+    .a5 {
+        width: 90%;
+        height: 500px;
+    }
+    .a6 {
+        width: 100%;
+        height: 1700px;
     }
 }

@@ -9,140 +9,178 @@
     <link rel="stylesheet" href="output.css" />
   </head>
   <body class="w-100% h-530 text-white bg-gray-950 max-sm:h-990">
-    <div>
+    <div
+      class="fixed flex z-10 items-center gap-60 justify-center w-full p-4 backdrop-blur-xl border-b border-white/15 duration-300 shadow-[0_8px_32px_0_rgba(0,200,255,0.1)]"
+    >
       <div
-        class="fixed flex z-10 items-center gap-60 justify-center w-full p-4 backdrop-blur-xl border-b border-white/15 duration-300 shadow-[0_8px_32px_0_rgba(0,200,255,0.1)]"
+        class="flex justify-between items-center lg:gap-40 max-sm:gap-20 px-6 h-24"
+      >
+        <h1 class="text-3xl lg:text-4xl font-black">World of Programming</h1>
+        <ul class="hidden lg:flex gap-10 items-center">
+          <li class="hover:underline hover:text-2xl">
+            <a href="./index.html">Home</a>
+          </li>
+          <li class="underline text-2xl">
+            <a href="./index1.html">Languages</a>
+          </li>
+          <li class="hover:underline hover:text-2xl">
+            <a href="./index2.html">Web Dev</a>
+          </li>
+          <li class="hover:underline hover:text-2xl">
+            <a href="./index3.html">Mobile Apps</a>
+          </li>
+          <li class="hover:underline hover:text-2xl">
+            <a href="./index4.html">Game Dev</a>
+          </li>
+          <li class="hover:underline hover:text-2xl">
+            <a href="./index5.html">Future</a>
+          </li>
+          <li class="hover:underline hover:text-2xl">
+            <a href="./index6.html">Сontrol</a>
+          </li>
+          <li class="hover:underline hover:text-2xl">
+            <a href="./index7.html">Settings</a>
+          </li>
+          <li class="hover:underline hover:text-2xl">
+            <a href="./index8.html">Locked</a>
+          </li>
+          <li class="hover:underline hover:text-2xl">
+            <a href="./index9.html">Downloads</a>
+          </li>
+        </ul>
+        <button class="hidden lg:block bg-blue-700 px-6 py-2 rounded-xl">
+          Sign In
+        </button>
+        <button id="menuBtn" class="lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="34"
+            height="34"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="white"
+            stroke-width="2"
+          >
+            <path d="M3 6h18" />
+            <path d="M3 12h18" />
+            <path d="M3 18h18" />
+          </svg>
+        </button>
+      </div>
+      <div
+        id="overlay"
+        class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+      ></div>
+      <div
+        id="menu"
+        class="fixed top-0 right-[-100%] w-72 h-screen bg-gray-900 z-50 transition-all duration-300 shadow-2xl rounded-l-3xl"
       >
         <div
-          class="flex justify-between items-center lg:gap-70 max-sm:gap-20 px-6 h-24"
+          class="flex justify-between items-center p-6 border-b border-gray-700"
         >
-          <h1 class="text-2xl lg:text-4xl font-black">World of Programming</h1>
-          <ul class="lg:flex gap-10 items-center max-sm:hidden">
-            <li class="hover:underline hover:text-2xl">
-              <a href="./index.html">Home</a>
-            </li>
-            <li class="underline text-2xl">
-              <a href="./index1.html">Languages</a>
-            </li>
-            <li class="hover:underline hover:text-2xl">
-              <a href="./index2.html">Web Dev</a>
-            </li>
-            <li class="hover:underline hover:text-2xl">
-              <a href="./index3.html">Mobile Apps</a>
-            </li>
-            <li class="hover:underline hover:text-2xl">
-              <a href="./index4.html">Game Dev</a>
-            </li>
-            <li class="hover:underline hover:text-2xl">
-              <a href="./index5.html">Future</a>
-            </li>
-          </ul>
-          <button class="hidden lg:block bg-blue-700 px-6 py-2 rounded-xl">
+          <h2 class="text-2xl font-bold">Menu</h2>
+
+          <button id="closeBtn" class="text-3xl">✕</button>
+        </div>
+
+        <nav class="flex flex-col mt-5">
+          <a
+            href="./index.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+            🏠 Home
+          </a>
+
+          <a
+            href="./index1.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+            💻 Languages
+          </a>
+
+          <a
+            href="./index2.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+            🌐 Web Dev
+          </a>
+
+          <a
+            href="./index3.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+            📱 Mobile Apps
+          </a>
+
+          <a
+            href="./index4.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+            🎮 Game Dev
+          </a>
+
+          <a
+            href="./index5.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+            🚀 Future
+          </a>
+
+          <a
+            href="./index6.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+            🎚️ Сontrol
+          </a>
+
+          <a
+            href="./index7.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+            ⚙️ Settings
+          </a>
+          
+          <a
+            href="./index7.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+             🔒 Locked
+          </a>
+
+          <a
+            href="./index7.html"
+            class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
+          >
+           🛠️ Downloads
+          </a>
+
+          <button
+            class="mx-6 mt-4 bg-blue-700 py-3 rounded-xl hover:bg-blue-800"
+          >
             Sign In
           </button>
-          <button id="menuBtn" class="lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="34"
-              height="34"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="white"
-              stroke-width="2"
-            >
-              <path d="M3 6h18" />
-              <path d="M3 12h18" />
-              <path d="M3 18h18" />
-            </svg>
-          </button>
-        </div>
-        <div
-          id="overlay"
-          class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
-        ></div>
-        <div
-          id="menu"
-          class="fixed top-0 right-[-100%] w-72 h-screen bg-gray-900 z-50 transition-all duration-300 shadow-2xl rounded-l-3xl"
-        >
-          <div
-            class="flex justify-between items-center p-6 border-b border-gray-700"
-          >
-            <h2 class="text-2xl font-bold">Menu</h2>
+        </nav>
+        <script>
+          const menu = document.getElementById("menu");
+          const overlay = document.getElementById("overlay");
 
-            <button id="closeBtn" class="text-3xl">✕</button>
-          </div>
+          document.getElementById("menuBtn").onclick = () => {
+            menu.style.right = "0";
+            overlay.classList.remove("hidden");
+          };
 
-          <nav class="flex flex-col mt-5">
-            <a
-              href="./index.html"
-              class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
-            >
-              🏠 Home
-            </a>
+          document.getElementById("closeBtn").onclick = closeMenu;
+          overlay.onclick = closeMenu;
 
-            <a
-              href="./index1.html"
-              class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
-            >
-              💻 Languages
-            </a>
-
-            <a
-              href="./index2.html"
-              class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
-            >
-              🌐 Web Dev
-            </a>
-
-            <a
-              href="./index3.html"
-              class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
-            >
-              📱 Mobile Apps
-            </a>
-
-            <a
-              href="./index4.html"
-              class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
-            >
-              🎮 Game Dev
-            </a>
-
-            <a
-              href="./index5.html"
-              class="px-8 py-4 hover:bg-blue-700 duration-300 rounded-lg mx-3"
-            >
-              🚀 Future
-            </a>
-
-            <button
-              class="mx-6 mt-8 bg-blue-700 py-3 rounded-xl hover:bg-blue-800"
-            >
-              Sign In
-            </button>
-          </nav>
-          <script>
-            const menu = document.getElementById("menu");
-            const overlay = document.getElementById("overlay");
-
-            document.getElementById("menuBtn").onclick = () => {
-              menu.style.right = "0";
-              overlay.classList.remove("hidden");
-            };
-
-            document.getElementById("closeBtn").onclick = closeMenu;
-            overlay.onclick = closeMenu;
-
-            function closeMenu() {
-              menu.style.right = "-100%";
-              overlay.classList.add("hidden");
-            }
-          </script>
-        </div>
+          function closeMenu() {
+            menu.style.right = "-100%";
+            overlay.classList.add("hidden");
+          }
+        </script>
       </div>
-
+    </div>
       <div
-        class="flex gap-100 pt-50 justify-center items-center max-sm:flex-wrap max-sm:gap-30 max-sm:pt-10"
+        class="flex gap-100 pt-50 justify-center items-center max-sm:flex-wrap max-sm:gap-5 max-sm:pt-10"
       >
         <div>
           <h1
@@ -230,7 +268,7 @@
             </div>
           </div>
           <div
-            class="w- h-70 bg-gray-900 hover:scale-105 flex justify-center items-center"
+            class="w-70 h-60 bg-gray-900 hover:scale-105 flex justify-center items-center"
           >
             <div>
               <h1>brush</h1>
@@ -268,16 +306,16 @@
       </div>
       <div class="pt-100 max-sm:pt-50">
         <div
-          class="h-40 flex gap-200 justify-center border-2 border-white bg-black items-center max-sm:gap-20 max-sm:flex-wrap max-sm:h-50"
+          class="h-40 flex lg:gap-200 justify-center border-2 border-white bg-black items-center max-sm:gap-5 max-sm:flex-wrap max-sm:h-50"
         >
           <div>
             <h1 class="text-2xl font-black">World of Programming</h1>
             <p>© 2024 World of Programming. All rights reserved.</p>
           </div>
-          <ul class="lg:flex gap-10 flex-wrap">
+          <ul class="flex gap-10 max-sm:flex-wrap">
             <li>Privacy Policy</li>
-            <li>Terms of Service</li>
-            <li>Contact Us</li>
+            <li>Terms</li>
+            <li>Contact</li>
             <li>Sitemap</li>
           </ul>
         </div>
